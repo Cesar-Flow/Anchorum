@@ -1,0 +1,23 @@
+{
+  "name": "anchorum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cesar-Flow/Anchorum.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cesar-Flow/Anchorum/issues"
+  },
+  "homepage": "https://github.com/Cesar-Flow/Anchorum#readme",
+  "dependencies": {
+    "firebase-admin": "^13.6.1"
+  }
+}

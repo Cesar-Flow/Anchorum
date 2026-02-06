@@ -1,0 +1,14 @@
+:root {
+    --background: #0A0C10;
+    --second-background: #0A0F12;
+    --light-green: #46D4BD;
+    --neon-green: #0D2727;
+    --gray: #4F5B68;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
