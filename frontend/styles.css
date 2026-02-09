@@ -1,14 +1,95 @@
+/* Paleta de cores */
 :root {
     --background: #0A0C10;
     --second-background: #0A0F12;
     --light-green: #46D4BD;
     --neon-green: #0D2727;
     --gray: #4F5B68;
+    --border: #133f3f;
 }
 
+
+/* Configurações gerais */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--second-background);
+}
+
+
+ul {
+    display: flex;
+}
+
+ul li {
+    color: var(--gray);
+}
+
+button, input[type=submit] {
+    padding: 15px;
+    border: solid 2px var(--border);
+    border-radius: 10px;
+    background-color: var(--second-background);
+    color: var(--light-green);
+    cursor: pointer;
+}
+
+button.active, input[type=submit].active {
+    color: black;
+    border: solid 2px var(--light-green);
+    background-color: var(--light-green);
+}
+
+h2 {
+    color: white;
+}
+
+
+/* [ HEADER ] */
+header {
+    background-color: var(--background);
+}
+
+.title {
+    color: white;
+}
+
+.subtitle {
+    color: var(--gray);
+}
+
+header nav {
+    color: var(--gray);
+}
+
+header .contact {
+    color: var(--light-green);
+}
+
+/* [ MAIN ]  */
+.popup-about {
+    border: solid 2px var(--border);
+    background-color: var(--neon-green);
+    color: var(--light-green);
+
+    padding: 8px 10px;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.highlight {
+    color: var(--light-green)
+}
+
+.access-buttons {
+    width: 450px;
+}
+
+.card span {
+    color: var(--gray);
 }
