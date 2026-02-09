@@ -31,17 +31,31 @@ ul li {
 }
 
 button, input[type=submit] {
-    padding: 15px;
+    padding: 17px;
     border: solid 2px var(--border);
     border-radius: 10px;
     background-color: var(--second-background);
     color: var(--light-green);
     cursor: pointer;
+
+    transition: all 0.25s ease;
 }
 
 button.active, input[type=submit].active {
     color: black;
     border: solid 2px var(--light-green);
+    background-color: var(--light-green);
+
+    transition: all 0.25s ease;
+}
+
+button:hover, input[type=submit]:hover {
+    background-color: rgba(70, 212, 189, 0.1);
+    border: 2px solid #4ae2c9;
+}
+
+button.active:hover, input[type=submit].active:hover {
+    box-shadow: 0 0 15px rgba(70, 212, 189, 0.5);
     background-color: var(--light-green);
 }
 
@@ -49,6 +63,13 @@ h2 {
     color: white;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.semibold {
+    font-weight: 600;
+}
 
 /* [ HEADER ] */
 header {
@@ -71,6 +92,35 @@ header .contact {
     color: var(--light-green);
 }
 
+/* [ NAVBAR ] */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 250px;
+}
+
+nav ul li {
+    transition: all 0.25s ease;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li:hover {
+    color: var(--light-green);
+    cursor: pointer;
+}
+
+
 /* [ MAIN ]  */
 .popup-about {
     border: solid 2px var(--border);
@@ -80,16 +130,86 @@ header .contact {
     padding: 8px 10px;
     border-radius: 20px;
     width: 300px;
+    margin: 40px 0px;
+
 }
 
 .highlight {
     color: var(--light-green)
 }
 
-.access-buttons {
-    width: 450px;
-}
-
 .card span {
     color: var(--gray);
+}
+
+section.welcome {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 200px;
+}
+
+.welcome h1 {
+    margin-bottom: 25px;
+    width: 650px;
+    text-align: center;
+    font-size: 70px;
+}
+
+.welcome span.subtitle {
+    width: 620px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+section.access-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+    margin-bottom: 40px;
+}
+
+section.access-buttons button {
+    width: 48%;
+}
+
+section.benefits {
+    width: 400px;
+}
+
+section.benefits ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13.5px;
+    
+    padding-left: 0; 
+    list-style-type: none;
+}
+
+section.benefits ul li {
+    display: flex;  
+    align-items: center; 
+    justify-content: center;
+}
+
+section.benefits ul li::marker {
+    font-size: 23px; 
+    font-weight: bold;
+    color: var(--light-green);
+}
+
+section.benefits ul li::before {
+    content: '';  
+    width: 10px;  
+    height: 10px; 
+    margin-right: 10px; 
+    border-radius: 50%; 
+    background-color: var(--light-green); 
+    width: 8.5px;  
+    height: 8.5px; 
 }
