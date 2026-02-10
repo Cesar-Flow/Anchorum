@@ -1,12 +1,14 @@
 /* Paleta de cores */
 :root {
-    --background: #0A0C10;
+    --background: rgba(10, 12, 16, 0.9);
     --second-background: #0A0F12;
     --light-background: #101318;
     --light-green: #46D4BD;
     --neon-green: #0D2727;
     --gray: #4F5B68;
     --border: #133f3f;
+
+    --background-gradient: linear-gradient(#14171E, #090C10);
 }
 
 
@@ -75,6 +77,10 @@ h2 {
 /* [ HEADER ] */
 header {
     background-color: var(--background);
+    max-height: 70px;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(10px);
 }
 
 .title {
@@ -89,7 +95,13 @@ header nav {
     color: var(--gray);
 }
 
-header .contact {
+header .contact-header {
+    color: #2c8181;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+header .contact-header:hover {
     color: var(--light-green);
 }
 
@@ -114,6 +126,8 @@ nav ul li {
     transition: all 0.25s ease;
     margin: 0;
     padding: 0;
+    color: white;
+
 }
 
 nav ul li:hover {
@@ -144,12 +158,11 @@ nav ul li:hover {
 }
 
 section.welcome {
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 200px;
 }
 
 .welcome h1 {
@@ -216,11 +229,12 @@ section.benefits ul li::before {
 }
 
 section.best-sellers {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .best-sellers h1 {
@@ -233,18 +247,16 @@ section.best-sellers {
 }
 
 section.cards {
-    width: 85vw;
-    height: 600px;
+    width: 70vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);   
-    gap: 16px; 
+    grid-auto-rows: auto;
+    gap: 25px;
     padding-top: 120px;
 }
 
 .cards .tag {
     padding: 3px 15px;
-    /* border: solid 2px var(--border); */
     background-color: var(--neon-green);
     color: var(--light-green);
 
@@ -258,8 +270,14 @@ section.cards {
     background-color: var(--light-background);
     padding: 20px;
     border-radius: 15px;
-    border: solid 1px #2d343b;
+    border: solid 1px #20252b;
     width: 100%;
+    height: 290px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border: solid 1px var(--border);
 }
 
 .card h2 {
@@ -288,5 +306,114 @@ section.cards {
 .footer span {
     font-size: 1.2em;
     font-weight: bold;
+    color: white;
+}
+
+section.show-all {
+    margin-top: 30px;
+}
+
+.show-all button {
+    padding: 10px 100px;
+}
+
+
+/* CUSTOM MADE */
+
+div.gradient-background {
+    background: var(--background-gradient);
+}
+
+section.custom-made {
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-made h1 {
+    margin-top: 100px;
+    font-size: 2.2em;
+}
+
+.custom-made span.subtitle {
+    width: 700px;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.custom-made .cards {
+    margin-top: 70px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    height: fit-content;
+    width: 50%;
+}
+
+.custom-made .cards .card {
+    width: 500px;
+    height: 120px;
+    font-size: 0.5em;
+}
+
+section.budget {
+    margin-top: 50px;
+    width: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.budget button {
+    width: 200px;
+    padding: 12px 10px;
+}
+
+/* Entre em contato */
+
+section.contact {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact h1 {
+    font-size: 2.2em;
+}
+
+.contact span.subtitle {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.contact form {
+    margin-top: 50px;
+    width: 35%;
+    background-color: #101318;
+    border: solid 1px #20252b;
+    padding: 30px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;    
+}
+
+.contact input:not(input[type=submit]), textarea {
+    background-color: #1A1D23;
+    border: solid 1px #20252b;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    resize: vertical;
+}
+
+.contact label {
     color: white;
 }
