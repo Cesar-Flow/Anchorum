@@ -2,6 +2,7 @@
 :root {
     --background: #0A0C10;
     --second-background: #0A0F12;
+    --light-background: #101318;
     --light-green: #46D4BD;
     --neon-green: #0D2727;
     --gray: #4F5B68;
@@ -212,4 +213,80 @@ section.benefits ul li::before {
     background-color: var(--light-green); 
     width: 8.5px;  
     height: 8.5px; 
+}
+
+section.best-sellers {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.best-sellers h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.best-sellers span {
+    font-size: 20px;
+}
+
+section.cards {
+    width: 85vw;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);   
+    gap: 16px; 
+    padding-top: 120px;
+}
+
+.cards .tag {
+    padding: 3px 15px;
+    /* border: solid 2px var(--border); */
+    background-color: var(--neon-green);
+    color: var(--light-green);
+
+    border-radius: 15px;
+    width: fit-content;
+
+    font-size: 13px;
+}
+
+.cards .card {
+    background-color: var(--light-background);
+    padding: 20px;
+    border-radius: 15px;
+    border: solid 1px #2d343b;
+    width: 100%;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card span {
+    font-size: 16px;
+}
+
+.card .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 95%;
+}
+
+.footer button {
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.footer span {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
 }
