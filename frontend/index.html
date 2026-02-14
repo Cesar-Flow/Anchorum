@@ -8,17 +8,17 @@
 </head>
 <body>
     <header>
-        <section class="logo"></section>
+        <!-- <section class="logo"></section> -->
         
         <nav>
             <ul>
-                <li>Catálogo</li>
-                <li>Serviços</li>
-                <li>Contato</li>
+                <li><a href="#best-sellers-section">Catálogo</a></li>
+                <li><a href="#custom-made-section">Serviços</a></li>
+                <li><a href="#contact-section">Contato</a></li>
             </ul>
         </nav>
 
-        <section class="contact-header"><span>Fale comigo</span></section>
+        <!-- <section class="contact-header"><span>Fale comigo</span></section> -->
     </header>
 
     <main>
@@ -32,8 +32,8 @@
             <span class="subtitle semibold">Ferramentas prontas para compra imediata ou soluções personalizadas desenvolvidas sob medida para o seu problema específico.</span>
 
             <section class="access-buttons">
-                <button class="catalog active">Ver Catálogo -></button>
-                <button class="custom-made">Solicitar Sob Medida</button>
+                <button class="catalog active scroll-btn" data-target="#best-sellers-section">Ver Catálogo -></button>
+                <button class="custom-made scroll-btn" data-target="#contact-section">Solicitar Sob Medida</button>
             </section>
 
             <section class="benefits">
@@ -46,7 +46,7 @@
         </section>
 
         <!-- Principais produtos do catalogo + opção "Ver mais" -->
-        <section class="best-sellers">
+        <section class="best-sellers" id="best-sellers-section">
             <h1 class="title">Ferramentas Prontas</h1>
             <span class="subtitle">Soluções testadas e funcionais, prontas para uso imediato. Compre, baixe e comece a usar.</span>
 
@@ -131,7 +131,7 @@
 
         <!-- Sessão de agendamento para ferramentas personalizadas -->
         <div class="gradient-background">
-            <section class="custom-made">
+            <section class="custom-made" id="custom-made-section">
                 <h1 class="title">Não encontrou o que precisa?</h1>
                 <span class="subtitle">Desenvolvo soluções sob medida para o seu problema específico. Me conta o que você precisa e eu crio para você.</span>
             
@@ -162,13 +162,13 @@
                 </section>
 
                 <section class="budget">
-                    <button class="budget-form active">Solicitar Orçamento -></button>
-                    <button class="budget-discord">Conversar no Discord</button>
+                    <button class="budget-form active scroll-btn" data-target="#contact-section">Solicitar Orçamento -></button>
+                    <button class="budget-discord scroll-btn" data-target="#contact-section">Conversar no Discord</button>
                 </section>
             </section>
 
             <!-- Sessão de contato -->
-            <section class="contact">
+            <section class="contact" id="contact-section">
                 <h1 class="title">Entre em Contato</h1>
                 <span class="subtitle">Dúvidas, orçamentos ou apenas para trocar uma ideia. Escolha a forma que preferir.</span>
 
@@ -202,5 +202,6 @@
             </footer>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
