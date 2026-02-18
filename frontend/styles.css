@@ -11,6 +11,7 @@
     --background-gradient: linear-gradient(#14171E, #090C10);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 /* Configurações gerais */
 * {
@@ -22,6 +23,7 @@
 
 body {
     background-color: var(--second-background);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 
